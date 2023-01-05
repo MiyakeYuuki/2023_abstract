@@ -1,0 +1,71 @@
+% !TeX encoding = UTF-8
+\documentclass[twocolumn]{jarticle}
+%\documentclass[uplatex]{jsarticle}
+%-------------------------------------------------------------------------%
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\usepackage{abst}                   % abst.styの呼び出し
+\usepackage{color}
+\usepackage[super]{cite}            % 文献参照の設定変更パッケージ
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{here}                   % here.styの呼び出し
+\usepackage{amsmath,amssymb}
+\usepackage{ascmac}
+\usepackage{url}
+\renewcommand\citeform[1]{#1)}      % 文献参照を^(1))にする
+\begin{document}
+%-------------------------------------------------------------------------%
+% 表紙
+%\thispagestyle{empty}
+%\include{cover.tex}
+%\newpage
+
+%-------------------------------------------------------------------------%
+% ページ番号の設定
+%\setcounter{page}{1}
+%\pagenumbering{roman}
+
+% 目次
+%\tableofcontents4
+%\newpage
+
+% 表目次
+%\listoftables
+
+% 図目次
+%\listoffigures
+
+%-------------------------------------------------------------------------%
+% title
+\twocolumn[
+    \centering
+    \fontsize{11pt}{0pt}\selectfont
+    {\gt エアシリンダ型人工筋肉の開発}
+    \vspace{4.5pt}
+
+    \fontsize{9pt}{0pt}\selectfont
+    {\rm Development of air cylinder type artificial muscle}
+    \vspace{1zw}
+
+    \raggedright
+    \fontsize{9pt}{0pt}\selectfont
+    \hspace{8zw}
+    発表者　　三宅　悠暉
+    \hspace{11.2zw}%{5.6zw}
+    主任教員　　平光　立拓　助教
+
+    \vspace{0.5zw}
+    \hspace{29.6zw}%{5.6zw}
+    指導教員　　関　啓明　教授， 辻　徳生　准教授
+    \vspace{3zw}
+]
+
+% main
+\fontsize{9pt}{0pt}\selectfont
+\setlength{\baselineskip}{12pt}
+\input{abstruct}
+%refarence
+\bibliographystyle{junsrt}
+\bibliography{ref}
+
+\end{document}

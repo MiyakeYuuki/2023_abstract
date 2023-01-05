@@ -1,0 +1,44 @@
+\pagestyle{empty}
+
+\usepackage{geometry} % ?????
+\geometry{left=17mm,right=17mm,top=17mm,bottom=17mm}
+
+
+\usepackage[]{multicol}
+
+% set section
+\renewcommand{\section}{%
+	\@startsection{section}%
+	{1}%
+	{\z@}%
+	{0.5zw}%
+	{0.5zw}%
+	{\small\gt}%
+}
+\renewcommand{\thesection}{\mc{\arabic{section}}.}
+
+% set subsection
+\renewcommand{\subsection}{%
+	\@startsection{subsection}%
+	{1}%
+	{\z@}%
+	{0.5zw}%
+	{-2.zw}%
+	{\small\mc\underline}%
+}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+% commentout figure
+\newif\iffigure
+%\figurefalse
+\figuretrue
+
+
+
+% �?->Fig.
+% ?->Table.
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table}
+\usepackage{caption}
+\captionsetup[figure]{format=plain, labelformat=simple, labelsep=space, font=footnotesize}
+\captionsetup[table]{format=plain, labelformat=simple, labelsep=space, font=footnotesize}
