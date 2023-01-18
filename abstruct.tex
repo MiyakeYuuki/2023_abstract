@@ -61,9 +61,10 @@
 エアシリンダ型人工筋肉のモデルを図\ref{Model of artifucialmuscle}に示す．
 エアシリンダ型人工筋肉は曲率半径$r$で環状に曲がった状態であり，ピストンは巻き角$\theta$の位置にある．
 巻き角$\theta$，印加圧力$P_\mathrm{in}$における人工筋肉の出力は$F$とする．
-なお，エアシリンダ型人工筋肉の紐直径を$d_\mathrm{string}$，チューブ内径(ピストン直径)は$d_\mathrm{tube}$である．また，シール部と紐の抵抗力は$D_\mathrm{s}$，チューブとピストンの抵抗力は$D_\mathrm{p}$である．
+なお，エアシリンダ型人工筋肉の紐直径を$d_\mathrm{string}$，チューブ内径(ピストン直径)は$d_\mathrm{tube}$である．
+また，シール部と紐の抵抗力は$D_\mathrm{s}$，チューブとピストンの抵抗力は$D_\mathrm{p}$である．
 モデルにおいては，チューブと紐が接触する角度を巻き角$\theta$と仮定する．
-これらの条件化におけるチューブと紐が接触している状態のエアシリンダ型人工筋肉の理論出力$F_\mathrm{th}$を導出した結果を式\eqref{F}に示す．
+これらの条件のエアシリンダ型人工筋肉の理論出力$F_\mathrm{th}$をキャプスタン方程式を応用し導出した結果を式\eqref{F}に示す．
 \begin{figure}[t]
   \centering
   \includegraphics[width=85mm]{_pdf/model_artifucialmuscle.pdf}
@@ -73,15 +74,15 @@
 
 \begin{equation}
   \label{F}
-  F_\mathrm{th}=\frac{1}{e^{\mu\theta}} (\frac{π}{4}d_\mathrm{tube}^2 P_\mathrm{in}-D_\mathrm{p} )-D_\mathrm{s}
+  F_\mathrm{th}=\frac{1}{e^{\mu\theta}} \{\frac{π}{4}(d_\mathrm{tube}^2 - d_\mathrm{string}^2)P_\mathrm{in}-D_\mathrm{p} \}-D_\mathrm{s}
 \end{equation}
 
 \subsection{理論値と実験値の比較}%-----------
-エアシリンダ型人工筋肉が半径$r$で環状に曲がった状態のチューブ位置(巻き角)$\theta$における出力$F$を計測する．
-紐の先端をフォースゲージに接続し，人工筋肉に圧力$P_\mathrm{in}$を印加し，出力$F$を測定する．
+エアシリンダ型人工筋肉が半径$r$で環状に曲がった状態のチューブ位置(巻き角)$\theta$における出力$F_\mathrm{ex}$を計測する．
+紐の先端をフォースゲージに接続し，人工筋肉に圧力$P_\mathrm{in}$を印加し，出力$F_\mathrm{ex}$を測定する．
 なお，フォースゲージ及び紐の先端を速度$v=\SI{5}{mm/s}$で直動させる．
 チューブの巻き半径$r$は$\SI{100}{mm}$と$\SI{150}{mm}$の2パターンである．
-印加圧力$P_\mathrm{in}$は$\SI{100}{kPa} \sim \SI{400}{kPa}$の範囲において$\SI{100}{kPa}$刻みでそれぞれ5回測定を行う．測定終了の判定は，出力$F$が5秒間$\SI{0}{N}$となる場合である．
+印加圧力$P_\mathrm{in}$は$\SI{100}{kPa} \sim \SI{400}{kPa}$の範囲において$\SI{100}{kPa}$刻みでそれぞれ5回測定を行う．測定終了の判定は，出力$F_\mathrm{ex}$が5秒間$\SI{0}{N}$となる場合である．
 \par
 チューブの巻き半径$r=\SI{100}{mm}$,$\SI{150}{mm}$の理論値(破線)と実験値(実線)をそれぞれ図\ref{r=100mm}，図\ref{r=150mm}に示す．また，実験値には$\SI{0.1}{Hz}$のローパスフィルタを実施した．図\ref{r=100mm}，\ref{r=150mm}より，概ね理論値と実験値の傾向が一致していることがわかる．しかし，図\ref{r=100mm}，図\ref{r=150mm}の実験値を比較すると，各印加圧力$P_\mathrm{in}$によって傾きが異なることがわかる．この原因は，ピストン抵抗力$D_\mathrm{p}$がチューブの曲げ半径$r$によって異なるためである．よって，エアシリンダ型人工筋肉が曲がった状態においては，チューブの曲げ半径$r$とピストン抵抗$D_\mathrm{p}$の関係を明らかにする必要がある．
 \begin{figure}[t]
